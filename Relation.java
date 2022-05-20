@@ -70,7 +70,7 @@ class Relation {
       availablePerson.add(mySteven);
       availablePerson.add(myVeera);
            for  (int i = 0;i < availablePerson.size(); i++){
-              System.out.println(String.format("%d %s", i, availablePerson(i).name));
+              System.out.println(String.format("%d %s", i, availablePerson.get(i).this.name));
             }
 
 
@@ -89,16 +89,37 @@ class Relation {
       selectedPersonIndex = input.nextInt();
       this.B = availablePerson.get(selectedPersonIndex);
         System.out.println(this.B);
-      
-      
+
    
-      
+       //creating a 2d array to figure out their relation
+         String[ ][ ] commonAnces =
+        {
+            {"same person", "parent", "grandparent", "great grandparent", "great grandparent", "2x great grandparent"},
+            {"parent", "siblings", "aunt/uncle", "grand aunt/uncle", "great grand aunt/uncle"},
+            {"grandparent", "aunt/uncle", "first cousin", "first cousin once removed", "first cousin twice removed"},
+            {"great grandparent", "grand aunt/uncle", "first cousin once removed", "second cousin", "second cousin once removed"},
+            {"2x great grandparent", "great grand aunt/uncle", "first cousin twice removed", "second cousin once removed", "third cousin"},
+            };
 
+    //print out each list for each person 
 
-      //have a while loop to determine a common ancestor and alternate with finding the parent between A and B 
-
-      //have an 2d array to figure out their relation
+    //determine where the common ancestor is and use array to find the relation 
+  
+  
 
       //display relation 
+        
   }
+
+  //making function for creating a list of each person's parent (i know i did not do this right)
+  void fillList(List<String> list, x){
+    if (x != null);
+       list.add(x); //adding x to list
+      parentX = x.this.parent;
+      list.add(parentX);
+      fillList(List<String> list,parentX);
+    
+  }
+
 }
+

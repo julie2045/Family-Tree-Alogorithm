@@ -1,6 +1,10 @@
 public class Person {
+  String name;
+  String parent;
   public Person (String name, String parent) {
-    System.out.println(String.format("%s", name);
+    this.name = name;
+    this.parent = parent;
+  
   }
   
 }
