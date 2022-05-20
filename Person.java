@@ -1,7 +1,6 @@
-public abstract class Person {
-  
-  public abstract String name();
-  
-  public abstract String parent();
+public class Person {
+  public Person (String name, String parent) {
+    System.out.println(String.format("%s", name);
+  }
   
 }
