@@ -16,7 +16,7 @@ class Relation {
       Person myBen = new Person("Ben", "Marj");
       Person myClarence = new Person("Clarence", "Jerome");
       Person myDonnie = new Person("Donnie", "Elizabeth");
-      Person myElizabeth = new Person("Elizabeth", "null");
+      Person myElizabeth = new Person("Elizabeth", null);
       Person myEllane = new Person("Ellane", "Gabe");
       Person myGabe = new Person("Gabe", "Marj");
       Person myJake = new Person("Jake", "Gabe");
@@ -102,7 +102,13 @@ class Relation {
             };
 
     //print out each list for each person 
-
+  
+      listA = fillList(list(), A);
+      System.out.println(listA);
+      listB = fillList(list(), B);
+      System.out.println(listB);
+      
+        
     //determine where the common ancestor is and use array to find the relation 
   
   
@@ -112,12 +118,21 @@ class Relation {
   }
 
   //making function for creating a list of each person's parent (i know i did not do this right)
-  void fillList(List<String> list, x){
+  String x;
+  void fillList(list(), x){
+    ArrayList<String> list = new ArrayList<String>();
     if (x != null);
        list.add(x); //adding x to list
-      parentX = x.this.parent;
-      list.add(parentX);
-      fillList(List<String> list,parentX);
+      parentX = x.this.parent; //finding parent of x
+      list.add(parentX); //adding that to list
+      fillList(list(),parentX);  //recursive function so do the same for the parent of x and find the parent of parentX
+   
+    else:
+    for(int i=0;i<list.size();i++){
+    System.out.println(list.get(i)); //prints out list 
+} 
+
+      
     
   }
 
